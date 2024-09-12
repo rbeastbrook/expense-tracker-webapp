@@ -26,8 +26,30 @@ A simple and user-friendly web application for tracking personal expenses. Users
   - MongoDB (NoSQL Database)
 
 ## Project Structure
-expense-tracker/ │ ├── client/ │ ├── index.html # Frontend HTML │ ├── styles.css # CSS for styling │ ├── app.js # JavaScript logic (Add, Edit, Delete expenses) │ ├── server/ │ ├── server.js # Backend server and route configuration │ └── routes/ │ └── expenseRoutes.js # Routes for expense management (CRUD) │ ├── models/ │ └── Expense.js # Mongoose model for expense schema (optional if using Mongoose) │ ├── .env # Environment variables (not tracked in Git) ├── .gitignore # Git ignore rules ├── README.md # Project documentation └── package.json # Project metadata and dependencies
 
+Below is the structure of the `expense-tracker` project:
+
+```plaintext
+expense-tracker/
+│
+├── client/
+│   ├── index.html        # Frontend HTML
+│   ├── styles.css        # CSS for styling
+│   └── app.js            # JavaScript logic (Add, Edit, Delete expenses)
+│
+├── server/
+│   ├── server.js         # Backend server and route configuration
+│   └── routes/
+│       └── expenseRoutes.js  # Routes for expense management (CRUD)
+│
+├── models/
+│   └── Expense.js        # Mongoose model for expense schema (optional if using Mongoose)
+│
+├── .env                  # Environment variables (not tracked in Git)
+├── .gitignore            # Git ignore rules
+├── README.md             # Project documentation
+└── package.json          # Project metadata and dependencies
+```
 ## Installation
 
 ### Prerequisites
@@ -52,7 +74,7 @@ Ensure you have the following installed:
 ```bash
   MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority
 ```
-  Replace "<username>, <password>, and mydatabase" with your MongoDB credentials.
+  Replace `<username>`, `<password>`, and `mydatabase` with your MongoDB credentials.
 
 
 ## Usage
@@ -78,7 +100,7 @@ The .env file contains the MongoDB URI and should not be committed to Git. Ensur
 The app is configured to use environment variables, ensuring sensitive credentials are not exposed.
 
 ## Future Enhancements
-User Authentication: Allow users to log in and manage their own expenses.
-Charts and Graphs: Visual representation of expenses over time.
-Recurring Expenses: Allow users to add recurring expenses (e.g., monthly bills).
-Export to CSV: Add a feature to export expense data to a CSV file.
+* User Authentication: Allow users to log in and manage their own expenses.
+* Charts and Graphs: Visual representation of expenses over time.
+* Recurring Expenses: Allow users to add recurring expenses (e.g., monthly bills).
+* Export to CSV: Add a feature to export expense data to a CSV file.
