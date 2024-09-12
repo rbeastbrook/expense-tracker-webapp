@@ -1,0 +1,114 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    justify-content: space-between; /* Aligns children with space between */
+    align-items: flex-start; /* Aligns items to the start of the cross-axis */
+    padding: 20px;
+}
+
+/* Form and Summary Container */
+.form-summary-container {
+    display: flex;
+    gap: 20px; /* Space between form and summary */
+}
+
+/* Form Styling */
+#expense-form, #edit-form, #summary {
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Button Styles */
+button {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 4px; /* Rounded edges */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Expenses List Area */
+#expenses-list {
+    max-height: 300px; /* Limiting height for scrollable area */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    background: white;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Each expense item */
+.expense-item {
+    display: flex; /* Arrange items in a row */
+    justify-content: space-between; /* Space between item description and buttons */
+    align-items: center; /* Aligns items vertically */
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* Divider between items */
+}
+
+.expense-item:last-child {
+    border-bottom: none; /* Remove border on the last item */
+}
+
+/* Summary Area */
+#summary {
+    background: white; /* White background for summary */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    .form-summary-container {
+        flex-direction: column;
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    #expense-form, #summary {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+/* Hover Effects for Expense Items */
+.expense-item:hover {
+    background-color: #f9f9f9; /* Background color change on hover */
+}
